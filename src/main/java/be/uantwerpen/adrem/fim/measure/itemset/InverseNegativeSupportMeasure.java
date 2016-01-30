@@ -5,6 +5,9 @@ import java.util.BitSet;
 import be.uantwerpen.adrem.fim.model.Item;
 import be.uantwerpen.adrem.fim.model.Itemset;
 
+/**
+ * @author Sandy Moens
+ */
 public class InverseNegativeSupportMeasure implements ItemSetMeasure {
 
 	private final double size;

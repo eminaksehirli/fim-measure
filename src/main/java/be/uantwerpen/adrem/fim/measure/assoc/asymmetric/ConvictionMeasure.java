@@ -7,8 +7,11 @@ import be.uantwerpen.adrem.fim.measure.assoc.RuleMeasureBase;
 import be.uantwerpen.adrem.fim.model.Itemset;
 import be.uantwerpen.adrem.fim.model.TransactionDB;
 
+/**
+ * @author Sandy Moens
+ */
 public class ConvictionMeasure extends RuleMeasureBase {
-
+	
 	public ConvictionMeasure(TransactionDB db) {
 		super(db);
 	}

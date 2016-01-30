@@ -6,6 +6,9 @@ import be.uantwerpen.adrem.fim.measure.tool.Probability;
 import be.uantwerpen.adrem.fim.model.Itemset;
 import be.uantwerpen.adrem.fim.model.TransactionDB;
 
+/**
+ * @author Sandy Moens
+ */
 public class RelativeOverlapMeasure extends RuleMeasureBase {
 
 	public RelativeOverlapMeasure(TransactionDB db) {

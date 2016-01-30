@@ -5,8 +5,11 @@ import be.uantwerpen.adrem.fim.measure.assoc.RuleMeasureBase;
 import be.uantwerpen.adrem.fim.model.Itemset;
 import be.uantwerpen.adrem.fim.model.TransactionDB;
 
+/**
+ * @author Sandy Moens
+ */
 public class ConfidenceMeasure extends RuleMeasureBase {
-
+	
 	public ConfidenceMeasure(TransactionDB db) {
 		super(db);
 	}

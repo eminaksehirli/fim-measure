@@ -7,6 +7,9 @@ import be.uantwerpen.adrem.fim.measure.assoc.RuleMeasureBase;
 import be.uantwerpen.adrem.fim.model.Itemset;
 import be.uantwerpen.adrem.fim.model.TransactionDB;
 
+/**
+ * @author Sandy Moens
+ */
 public class YulesQMeasure extends RuleMeasureBase {
 
 	public YulesQMeasure(TransactionDB db) {

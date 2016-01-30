@@ -6,10 +6,10 @@ import be.uantwerpen.adrem.fim.model.Itemset;
 /**
  * This interface provides basic functionality for association rule measures
  * 
- * @author Sandy Moens & Emin Akserhirli
+ * @author Sandy Moens
+ * @author Emin Aksehirli
  */
 public interface RuleMeasure extends Measure {
-
 	/**
 	 * Evaluates a given association rule and returns the score
 	 * 

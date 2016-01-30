@@ -12,6 +12,9 @@ import be.uantwerpen.adrem.fim.measure.itemset.ItemSetMeasure;
 import be.uantwerpen.adrem.fim.model.Itemset;
 import be.uantwerpen.adrem.fim.model.TransactionDB;
 
+/**
+ * @author Sandy Moens
+ */
 public class ItemSetMeasureExecutor {
 	public static void execute(ItemSetMeasure measure, String name,
 			String datasetFile, String setsFile) {
@@ -19,11 +22,12 @@ public class ItemSetMeasureExecutor {
 		TransactionDB db = new TransactionDB(datasetFile);
 
 		try {
-			BufferedReader reader = new BufferedReader(new FileReader(
-					setsFile));
-			String outputFile = setsFile.substring(0,
-					setsFile.lastIndexOf('.'))
-					+ "-" + name + ".txt";
+			BufferedReader reader = new BufferedReader(new FileReader(setsFile));
+			String outputFile = setsFile
+					.substring(0, setsFile.lastIndexOf('.'))
+					+ "-"
+					+ name
+					+ ".txt";
 			BufferedWriter writer = new BufferedWriter(new FileWriter(
 					outputFile));
 

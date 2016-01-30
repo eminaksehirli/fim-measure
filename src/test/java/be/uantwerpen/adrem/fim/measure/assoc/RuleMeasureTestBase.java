@@ -7,6 +7,10 @@ import be.uantwerpen.adrem.fim.model.Itemset;
 import be.uantwerpen.adrem.fim.model.Transaction;
 import be.uantwerpen.adrem.fim.model.TransactionDB;
 
+/**
+ * @author Sandy Moens
+ * @author Emin Aksehirli
+ */
 public abstract class RuleMeasureTestBase {
 
 	private static int[][] theDb = new int[][] { { 0, 1, 2, 3, 4 },
@@ -17,7 +21,7 @@ public abstract class RuleMeasureTestBase {
 	protected Itemset sEmpty, s0, s01, s012, s47, s56;
 
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() {
 		db = new TransactionDB();
 
 		for (int[] transaction : theDb) {

@@ -11,7 +11,8 @@ import be.uantwerpen.adrem.fim.model.Itemset;
  * 
  * Sup(X) = P(X)
  * 
- * @author Sandy Moens & Emin Aksehirli
+ * @author Sandy Moens
+ * @author Emin Aksehirli
  */
 public class SupportMeasure implements ItemSetMeasure {
 

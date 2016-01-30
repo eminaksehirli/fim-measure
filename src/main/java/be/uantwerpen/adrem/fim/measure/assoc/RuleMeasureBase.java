@@ -8,7 +8,8 @@ import be.uantwerpen.adrem.fim.model.TransactionDB;
 /**
  * This class contains basic information for association rule measures
  * 
- * @author Sandy Moens & Emin Aksehirli
+ * @author Sandy Moens
+ * @author Emin Aksehirli
  */
 public abstract class RuleMeasureBase implements ItemSetMeasure, RuleMeasure {
 

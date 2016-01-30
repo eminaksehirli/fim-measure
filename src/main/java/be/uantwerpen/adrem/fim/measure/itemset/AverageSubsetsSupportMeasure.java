@@ -10,6 +10,9 @@ import be.uantwerpen.adrem.fim.model.Itemset;
 import be.uantwerpen.adrem.fim.model.Transaction;
 import be.uantwerpen.adrem.fim.model.TransactionDB;
 
+/**
+ * @author Sandy Moens
+ */
 public class AverageSubsetsSupportMeasure extends ItemSetMeasureBase {
 
 	private boolean excludeSingletons = false;

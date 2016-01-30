@@ -7,7 +7,8 @@ import be.uantwerpen.adrem.fim.model.Itemset;
 /**
  * This interface provides basic functionality for itemset measures
  * 
- * @author Sandy Moens & Emin Akserhirli
+ * @author Sandy Moens
+ * @author Emin Aksehirli
  */
 public interface ItemSetMeasure extends Measure {
 

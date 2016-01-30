@@ -16,6 +16,7 @@ import java.util.List;
  * Utility functions
  * 
  * @author Sandy Moens
+ * @author Emin Aksehirli
  */
 public class Utils {
 
@@ -62,20 +63,6 @@ public class Utils {
 	 *         value
 	 */
 	public static double combination(double top, double bottom) {
-		// if (bottom > top) {
-		// return 0;
-		// } else {
-		// double s = 1;
-		// for (double d = top; d > 0; d--) {
-		// s *= d;
-		// System.out.println("s " + s);
-		// }
-		// System.out.println(Utils.factorial(top));
-		// System.out.println(Utils.factorial(bottom));
-		// System.out.println(Utils.factorial(top - top));
-		// return Utils.factorial(top)
-		// / (Utils.factorial(bottom) * Utils.factorial(top - bottom));
-		// }
 		if (bottom > top)
 			return 0;
 
@@ -143,10 +130,6 @@ public class Utils {
 				}
 			}
 		}
-		// if ((right == 1 && values[0] == values[1]) || right == 1
-		// && values[0] > toSearch) {
-		// return 0;
-		// }
 		return (int) (right);
 	}
 
@@ -182,10 +165,6 @@ public class Utils {
 				}
 			}
 		}
-		// if ((right == 1 && values[0] == values[1]) || right == 1
-		// && values[0] > toSearch) {
-		// return 0;
-		// }
 		return (int) (right);
 	}
 
@@ -240,7 +219,7 @@ public class Utils {
 	 * Returns a range of int's between 0 (inclusive) and end (exclusive).
 	 * 
 	 * @param end
-	 *          Ending number (exclusive)
+	 *            Ending number (exclusive)
 	 * @return int array containing numbers between 0 and end incremented by 1
 	 */
 	public static int[] range(int end) {
