@@ -15,7 +15,7 @@
 		<developer>
 			<name>Emin Aksehirli</name>
 			<email>emin.aksehirli@gmail.com</email>
-			<organizationUrl>http//memin.tk/</organizationUrl>
+			<organizationUrl>http://memin.tk/</organizationUrl>
 		</developer>
 		<developer>
 			<name>Len Feremans</name>
@@ -130,4 +130,5 @@
 			<version>0.1</version>
 		</dependency>
 	</dependencies>
+	<url>https://gitlab.com/adrem/fim-measure</url>
 </project>
