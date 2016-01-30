@@ -3,12 +3,12 @@ package mime.plain.measure.assoc.symmetric;
 import static mime.plain.measure.tool.Probability.P_AB;
 import mime.plain.measure.assoc.RuleMeasureBase;
 import mime.plain.measure.tool.Probability;
-import be.uantwerpen.adrem.fim.base.PlainItemSet;
-import be.uantwerpen.adrem.fim.base.PlainTransactionDB;
+import be.uantwerpen.adrem.fim.model.Itemset;
+import be.uantwerpen.adrem.fim.model.TransactionDB;
 
 public class RelativeOverlapMeasure extends RuleMeasureBase {
 
-	public RelativeOverlapMeasure(PlainTransactionDB db) {
+	public RelativeOverlapMeasure(TransactionDB db) {
 		super(db);
 	}
 
@@ -18,7 +18,7 @@ public class RelativeOverlapMeasure extends RuleMeasureBase {
 	}
 
 	@Override
-	public double evaluate(PlainItemSet lhs, PlainItemSet rhs) {
+	public double evaluate(Itemset lhs, Itemset rhs) {
 		return P_AB(lhs, rhs, dbSize) / Probability.P_A_OR_B(lhs, rhs, dbSize);
 	}
 }

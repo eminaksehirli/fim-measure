@@ -9,14 +9,14 @@ import java.io.IOException;
 import java.util.StringTokenizer;
 
 import mime.plain.measure.itemset.ItemSetMeasure;
-import be.uantwerpen.adrem.fim.base.PlainItemSet;
-import be.uantwerpen.adrem.fim.base.PlainTransactionDB;
+import be.uantwerpen.adrem.fim.model.Itemset;
+import be.uantwerpen.adrem.fim.model.TransactionDB;
 
 public class ItemSetMeasureExecutor {
 	public static void execute(ItemSetMeasure measure, String name,
 			String datasetFile, String setsFile) {
 
-		PlainTransactionDB db = new PlainTransactionDB(datasetFile);
+		TransactionDB db = new TransactionDB(datasetFile);
 
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader(
@@ -40,7 +40,7 @@ public class ItemSetMeasureExecutor {
 				lineNoExtra = lineNoExtra.trim();
 
 				StringTokenizer st = new StringTokenizer(lineNoExtra);
-				PlainItemSet itemSet = new PlainItemSet();
+				Itemset itemSet = new Itemset();
 				while (st.hasMoreTokens()) {
 					itemSet.add(db.getItem(st.nextToken()));
 				}

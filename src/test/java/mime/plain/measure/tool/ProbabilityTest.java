@@ -15,9 +15,9 @@ import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import be.uantwerpen.adrem.fim.base.PlainItemSet;
-import be.uantwerpen.adrem.fim.base.PlainTransaction;
-import be.uantwerpen.adrem.fim.base.PlainTransactionDB;
+import be.uantwerpen.adrem.fim.model.Itemset;
+import be.uantwerpen.adrem.fim.model.Transaction;
+import be.uantwerpen.adrem.fim.model.TransactionDB;
 
 public class ProbabilityTest {
 
@@ -27,16 +27,16 @@ public class ProbabilityTest {
 			{ 0, 1, 2, 4, 5 }, { 0, 1, 5, 6, 7 }, { 1, 2, 4, 5, 7 },
 			{ 1, 3, 5, 6, 7 } };
 
-	private PlainTransactionDB db;
+	private TransactionDB db;
 	private int size;
-	private PlainItemSet sEmpty, s0, s01, s012, s47, s56;
+	private Itemset sEmpty, s0, s01, s012, s47, s56;
 
 	@Before
 	public void setUp() throws Exception {
-		db = new PlainTransactionDB();
+		db = new TransactionDB();
 
 		for (int[] transaction : theDb) {
-			PlainTransaction tx = new PlainTransaction();
+			Transaction tx = new Transaction();
 			for (int id : transaction) {
 				tx.add(db.getItem(id));
 			}
@@ -53,8 +53,8 @@ public class ProbabilityTest {
 		s56 = getSet(new int[] { 5, 6 });
 	}
 
-	private PlainItemSet getSet(int[] items) {
-		PlainItemSet set = new PlainItemSet();
+	private Itemset getSet(int[] items) {
+		Itemset set = new Itemset();
 		for (int item : items) {
 			set.add(db.getItem(item));
 		}

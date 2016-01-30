@@ -1,6 +1,6 @@
 package mime.plain.measure.itemset;
 
-import be.uantwerpen.adrem.fim.base.PlainTransactionDB;
+import be.uantwerpen.adrem.fim.model.TransactionDB;
 
 /**
  * This class contains basic information for all itemset measures
@@ -11,7 +11,7 @@ public abstract class ItemSetMeasureBase implements ItemSetMeasure {
 
 	protected int dbSize;
 
-	public ItemSetMeasureBase(PlainTransactionDB db) {
+	public ItemSetMeasureBase(TransactionDB db) {
 		dbSize = db.getNumberOfTransactions();
 	}
 }

@@ -4,18 +4,18 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import be.uantwerpen.adrem.fim.base.PlainItem;
-import be.uantwerpen.adrem.fim.base.PlainItemSet;
+import be.uantwerpen.adrem.fim.model.Item;
+import be.uantwerpen.adrem.fim.model.Itemset;
 
 public interface SetReporter {
 
-	public void report(PlainItemSet set);
+	public void report(Itemset set);
 
 	public void close();
 
 	public static class NullReporter implements SetReporter {
 		@Override
-		public void report(PlainItemSet set) {
+		public void report(Itemset set) {
 		}
 
 		@Override
@@ -36,8 +36,8 @@ public interface SetReporter {
 		}
 
 		@Override
-		public void report(PlainItemSet set) {
-			for (PlainItem item : set) {
+		public void report(Itemset set) {
+			for (Item item : set) {
 				builder.append(item.getId() + " ");
 			}
 			builder.setLength(builder.length() - 1);
@@ -71,9 +71,9 @@ public interface SetReporter {
 		}
 
 		@Override
-		public void report(PlainItemSet set) {
+		public void report(Itemset set) {
 			try {
-				for (PlainItem item : set) {
+				for (Item item : set) {
 					writer.append(item.getId() + " ");
 				}
 				writer.newLine();

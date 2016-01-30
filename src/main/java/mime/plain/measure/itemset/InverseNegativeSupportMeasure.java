@@ -2,8 +2,8 @@ package mime.plain.measure.itemset;
 
 import java.util.BitSet;
 
-import be.uantwerpen.adrem.fim.base.PlainItem;
-import be.uantwerpen.adrem.fim.base.PlainItemSet;
+import be.uantwerpen.adrem.fim.model.Item;
+import be.uantwerpen.adrem.fim.model.Itemset;
 
 public class InverseNegativeSupportMeasure implements ItemSetMeasure {
 
@@ -18,22 +18,22 @@ public class InverseNegativeSupportMeasure implements ItemSetMeasure {
 		return "Inverse Negative Support";
 	}
 
-	private BitSet getDisjunctTids(PlainItemSet itemSet) {
+	private BitSet getDisjunctTids(Itemset itemSet) {
 		BitSet tids = new BitSet();
-		for (PlainItem item : itemSet) {
+		for (Item item : itemSet) {
 			tids.or(item.getTIDs());
 		}
 		return tids;
 	}
 
 	@Override
-	public double evaluate(PlainItemSet itemSet) {
+	public double evaluate(Itemset itemSet) {
 		return 1 / (size - getDisjunctTids(itemSet).cardinality());
 	}
 
 	@Override
-	public double evaluate(PlainItemSet itemSet, PlainItem extension) {
-		PlainItemSet i = new PlainItemSet(itemSet);
+	public double evaluate(Itemset itemSet, Item extension) {
+		Itemset i = new Itemset(itemSet);
 		i.add(extension);
 		return evaluate(i);
 	}

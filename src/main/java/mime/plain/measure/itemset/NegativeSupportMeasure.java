@@ -1,8 +1,8 @@
 package mime.plain.measure.itemset;
 
-import be.uantwerpen.adrem.fim.base.PlainItem;
-import be.uantwerpen.adrem.fim.base.PlainItemSet;
-import be.uantwerpen.adrem.fim.base.PlainTransactionDB;
+import be.uantwerpen.adrem.fim.model.Item;
+import be.uantwerpen.adrem.fim.model.Itemset;
+import be.uantwerpen.adrem.fim.model.TransactionDB;
 
 /**
  * This class computes the size of the database not covered by an itemset
@@ -14,7 +14,7 @@ import be.uantwerpen.adrem.fim.base.PlainTransactionDB;
  */
 public class NegativeSupportMeasure extends ItemSetMeasureBase {
 
-	public NegativeSupportMeasure(PlainTransactionDB db) {
+	public NegativeSupportMeasure(TransactionDB db) {
 		super(db);
 	}
 
@@ -24,13 +24,13 @@ public class NegativeSupportMeasure extends ItemSetMeasureBase {
 	}
 
 	@Override
-	public double evaluate(PlainItemSet itemSet) {
+	public double evaluate(Itemset itemSet) {
 		return dbSize - itemSet.getTIDs().cardinality();
 	}
 
 	@Override
-	public double evaluate(PlainItemSet itemSet, PlainItem extension) {
-		PlainItemSet i = new PlainItemSet(itemSet);
+	public double evaluate(Itemset itemSet, Item extension) {
+		Itemset i = new Itemset(itemSet);
 		i.add(extension);
 		return evaluate(i);
 	}

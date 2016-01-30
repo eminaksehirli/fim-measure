@@ -5,17 +5,17 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-import be.uantwerpen.adrem.fim.base.PlainItem;
-import be.uantwerpen.adrem.fim.base.PlainItemSet;
-import be.uantwerpen.adrem.fim.base.PlainTransaction;
-import be.uantwerpen.adrem.fim.base.PlainTransactionDB;
+import be.uantwerpen.adrem.fim.model.Item;
+import be.uantwerpen.adrem.fim.model.Itemset;
+import be.uantwerpen.adrem.fim.model.Transaction;
+import be.uantwerpen.adrem.fim.model.TransactionDB;
 
 public class AverageSubsetsSupportMeasure extends ItemSetMeasureBase {
 
 	private boolean excludeSingletons = false;
-	private final List<PlainTransaction> transactions;
+	private final List<Transaction> transactions;
 
-	public AverageSubsetsSupportMeasure(PlainTransactionDB pdb) {
+	public AverageSubsetsSupportMeasure(TransactionDB pdb) {
 		super(pdb);
 		this.transactions = pdb.getTransactions();
 	}
@@ -25,18 +25,18 @@ public class AverageSubsetsSupportMeasure extends ItemSetMeasureBase {
 		return "Average Subsets Support Measure";
 	}
 
-	private BitSet getDisjunctTids(PlainItemSet itemSet) {
+	private BitSet getDisjunctTids(Itemset itemSet) {
 		BitSet tids = new BitSet();
-		for (PlainItem item : itemSet) {
+		for (Item item : itemSet) {
 			tids.or(item.getTIDs());
 		}
 		return tids;
 	}
 
 	@Override
-	public double evaluate(PlainItemSet itemSet) {
+	public double evaluate(Itemset itemSet) {
 		BitSet tids = getDisjunctTids(itemSet);
-		Iterator<PlainTransaction> it = transactions.iterator();
+		Iterator<Transaction> it = transactions.iterator();
 		int next = -1;
 		int curr = 0;
 
@@ -47,7 +47,7 @@ public class AverageSubsetsSupportMeasure extends ItemSetMeasureBase {
 			if (next == -1) {
 				break;
 			}
-			PlainTransaction t = it.next();
+			Transaction t = it.next();
 			for (int i = curr + 1; i <= next; i++) {
 				t = it.next();
 			}
@@ -73,10 +73,10 @@ public class AverageSubsetsSupportMeasure extends ItemSetMeasureBase {
 		return score / (Math.pow(2, itemSet.size()) - 1);
 	}
 
-	private int getSizeUnion(PlainTransaction t, PlainItemSet itemSet) {
-		Collection<PlainItem> tSet = t.asCollection();
+	private int getSizeUnion(Transaction t, Itemset itemSet) {
+		Collection<Item> tSet = t.asCollection();
 		int size = 0;
-		for (PlainItem item : itemSet) {
+		for (Item item : itemSet) {
 			size += tSet.contains(item) ? 1 : 0;
 		}
 		return size;
@@ -87,8 +87,8 @@ public class AverageSubsetsSupportMeasure extends ItemSetMeasureBase {
 	}
 
 	@Override
-	public double evaluate(PlainItemSet itemSet, PlainItem extension) {
-		PlainItemSet i = new PlainItemSet(itemSet);
+	public double evaluate(Itemset itemSet, Item extension) {
+		Itemset i = new Itemset(itemSet);
 		i.add(extension);
 		return evaluate(i);
 	}

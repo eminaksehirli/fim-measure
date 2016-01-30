@@ -1,7 +1,7 @@
 package mime.plain.measure.assoc;
 
 import mime.plain.measure.Measure;
-import be.uantwerpen.adrem.fim.base.PlainItemSet;
+import be.uantwerpen.adrem.fim.model.Itemset;
 
 /**
  * This interface provides basic functionality for association rule measures
@@ -19,5 +19,5 @@ public interface RuleMeasure extends Measure {
 	 *            the right hand side of the rule
 	 * @return the score for the association rule
 	 */
-	public double evaluate(PlainItemSet lhs, PlainItemSet rhs);
+	public double evaluate(Itemset lhs, Itemset rhs);
 }

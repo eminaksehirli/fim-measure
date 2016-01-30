@@ -1,8 +1,8 @@
 package mime.plain.measure.itemset;
 
 import mime.plain.measure.Measure;
-import be.uantwerpen.adrem.fim.base.PlainItem;
-import be.uantwerpen.adrem.fim.base.PlainItemSet;
+import be.uantwerpen.adrem.fim.model.Item;
+import be.uantwerpen.adrem.fim.model.Itemset;
 
 /**
  * This interface provides basic functionality for itemset measures
@@ -18,7 +18,7 @@ public interface ItemSetMeasure extends Measure {
 	 *            the itemset to evaluate
 	 * @return the score for the itemset
 	 */
-	public double evaluate(PlainItemSet itemSet);
+	public double evaluate(Itemset itemSet);
 
-	public double evaluate(PlainItemSet itemSet, PlainItem extension);
+	public double evaluate(Itemset itemSet, Item extension);
 }
