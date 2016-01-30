@@ -9,11 +9,13 @@
 	<developers>
 		<developer>
 			<name>Sandy Moens</name>
+			<email>sandy.moens@uantwerpen.be</email>
+			<organizationUrl>https://www.uantwerpen.be/nl/personeel/sandy-moens/</organizationUrl>
 		</developer>
 		<developer>
 			<name>Emin Aksehirli</name>
-			<email>emin.aksehirli@uantwerpen.be</email>
-			<organizationUrl>https://www.uantwerpen.be/nl/personeel/emin-aksehirli/</organizationUrl>
+			<email>emin.aksehirli@gmail.com</email>
+			<organizationUrl>http//memin.tk/</organizationUrl>
 		</developer>
 		<developer>
 			<name>Len Feremans</name>
