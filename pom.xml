@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>be.uantwerpen.adrem</groupId>
 	<artifactId>fim-measures</artifactId>
-	<version>0.1</version>
+	<version>0.2-SNAPSHOT</version>
 	<name>Association Rule Mining Measures</name>
 	<description>Interestingness measures for frequent itemset and association rule mining tasks.</description>
 	<developers>
