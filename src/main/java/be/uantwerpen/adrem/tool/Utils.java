@@ -1,4 +1,4 @@
-package mime.tool;
+package be.uantwerpen.adrem.tool;
 
 import static java.util.Arrays.fill;
 
