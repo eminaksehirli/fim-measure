@@ -1,6 +1,6 @@
-package mime.plain.measure.assoc;
+package be.uantwerpen.adrem.fim.measure.assoc;
 
-import mime.plain.measure.Measure;
+import be.uantwerpen.adrem.fim.measure.Measure;
 import be.uantwerpen.adrem.fim.model.Itemset;
 
 /**

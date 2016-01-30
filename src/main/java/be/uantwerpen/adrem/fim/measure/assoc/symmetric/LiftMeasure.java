@@ -1,8 +1,8 @@
-package mime.plain.measure.assoc.symmetric;
+package be.uantwerpen.adrem.fim.measure.assoc.symmetric;
 
-import static mime.plain.measure.tool.Probability.P_A;
-import static mime.plain.measure.tool.Probability.P_AB;
-import mime.plain.measure.assoc.RuleMeasureBase;
+import static be.uantwerpen.adrem.fim.measure.tool.Probability.P_A;
+import static be.uantwerpen.adrem.fim.measure.tool.Probability.P_AB;
+import be.uantwerpen.adrem.fim.measure.assoc.RuleMeasureBase;
 import be.uantwerpen.adrem.fim.model.Itemset;
 import be.uantwerpen.adrem.fim.model.TransactionDB;
 

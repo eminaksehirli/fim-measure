@@ -1,10 +1,10 @@
-package mime.plain.measure.assoc.symmetric;
+package be.uantwerpen.adrem.fim.measure.assoc.symmetric;
 
+import static be.uantwerpen.adrem.fim.measure.tool.Probability.P_AB;
+import static be.uantwerpen.adrem.fim.measure.tool.Probability.P_NOT_A_B;
+import static be.uantwerpen.adrem.fim.measure.tool.Probability.P_NOT_A_NOT_B;
 import static java.lang.Math.sqrt;
-import static mime.plain.measure.tool.Probability.P_AB;
-import static mime.plain.measure.tool.Probability.P_NOT_A_B;
-import static mime.plain.measure.tool.Probability.P_NOT_A_NOT_B;
-import mime.plain.measure.assoc.RuleMeasureBase;
+import be.uantwerpen.adrem.fim.measure.assoc.RuleMeasureBase;
 import be.uantwerpen.adrem.fim.model.Itemset;
 import be.uantwerpen.adrem.fim.model.TransactionDB;
 

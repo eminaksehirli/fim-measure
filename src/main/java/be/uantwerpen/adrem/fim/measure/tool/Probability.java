@@ -1,4 +1,4 @@
-package mime.plain.measure.tool;
+package be.uantwerpen.adrem.fim.measure.tool;
 
 import java.util.BitSet;
 

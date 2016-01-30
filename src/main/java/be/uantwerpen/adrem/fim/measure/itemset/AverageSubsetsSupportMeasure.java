@@ -1,4 +1,4 @@
-package mime.plain.measure.itemset;
+package be.uantwerpen.adrem.fim.measure.itemset;
 
 import java.util.BitSet;
 import java.util.Collection;

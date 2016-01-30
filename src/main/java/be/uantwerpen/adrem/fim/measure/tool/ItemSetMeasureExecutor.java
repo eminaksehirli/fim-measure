@@ -1,4 +1,4 @@
-package mime.plain.measure.tool;
+package be.uantwerpen.adrem.fim.measure.tool;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -8,7 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.StringTokenizer;
 
-import mime.plain.measure.itemset.ItemSetMeasure;
+import be.uantwerpen.adrem.fim.measure.itemset.ItemSetMeasure;
 import be.uantwerpen.adrem.fim.model.Itemset;
 import be.uantwerpen.adrem.fim.model.TransactionDB;
 

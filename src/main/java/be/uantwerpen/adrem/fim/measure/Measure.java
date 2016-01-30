@@ -1,4 +1,4 @@
-package mime.plain.measure;
+package be.uantwerpen.adrem.fim.measure;
 
 /**
  * Interface for all kinds of measures. This class provides very basic

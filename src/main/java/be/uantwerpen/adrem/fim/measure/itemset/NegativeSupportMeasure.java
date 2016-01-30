@@ -1,4 +1,4 @@
-package mime.plain.measure.itemset;
+package be.uantwerpen.adrem.fim.measure.itemset;
 
 import be.uantwerpen.adrem.fim.model.Item;
 import be.uantwerpen.adrem.fim.model.Itemset;
