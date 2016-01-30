@@ -1,4 +1,4 @@
-package mime.plain.measure.assoc.symmetric;
+package be.uantwerpen.adrem.fim.measure.assoc.symmetric;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

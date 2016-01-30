@@ -1,4 +1,4 @@
-package mime.plain.measure.assoc;
+package be.uantwerpen.adrem.fim.measure.assoc;
 
 import org.junit.Before;
 import org.junit.Test;

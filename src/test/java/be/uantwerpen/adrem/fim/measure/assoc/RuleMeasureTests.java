@@ -1,11 +1,11 @@
-package mime.plain.measure.assoc;
-
-import mime.plain.measure.assoc.asymmetric.AsymmetricRuleMeasureTests;
-import mime.plain.measure.assoc.symmetric.SymmetricRuleMeasureTests;
+package be.uantwerpen.adrem.fim.measure.assoc;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
+
+import be.uantwerpen.adrem.fim.measure.assoc.asymmetric.AsymmetricRuleMeasureTests;
+import be.uantwerpen.adrem.fim.measure.assoc.symmetric.SymmetricRuleMeasureTests;
 
 @RunWith(Suite.class)
 @SuiteClasses({ AsymmetricRuleMeasureTests.class,

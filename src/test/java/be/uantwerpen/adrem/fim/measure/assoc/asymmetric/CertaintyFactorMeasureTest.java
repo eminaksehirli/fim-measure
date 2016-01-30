@@ -1,12 +1,13 @@
-package mime.plain.measure.assoc.asymmetric;
+package be.uantwerpen.adrem.fim.measure.assoc.asymmetric;
 
+import static be.uantwerpen.adrem.fim.measure.assoc.RuleMeasureTests.delta;
 import static java.lang.Double.NaN;
-import static mime.plain.measure.assoc.RuleMeasureTests.delta;
 import junit.framework.Assert;
-import mime.plain.measure.assoc.RuleMeasureTestBase;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import be.uantwerpen.adrem.fim.measure.assoc.RuleMeasureTestBase;
 
 public class CertaintyFactorMeasureTest extends RuleMeasureTestBase {
 
